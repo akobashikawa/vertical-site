@@ -17,3 +17,9 @@ encontrar dónde hacerla.
 
 Decidí reinventar la rueda para tratar de comprender las ideas del
 proceso de solución.
+
+simple_html
+-----------
+* Páginas con anclas
+* Cabecera
+* Menú con enlaces a páginas
