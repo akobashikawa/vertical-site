@@ -5,8 +5,8 @@ Vertical site studio
 
 La motivación fue hacer un site similar a:
 
-http://www.soleilnoir.net/believein
-http://discover.store.sony.com/tablet
+* http://www.soleilnoir.net/believein
+* http://discover.store.sony.com/tablet
 
 Revisando believein, me resultaba un poco difícil comprender cómo
 implementaba el comportamiento que veía.
