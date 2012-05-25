@@ -11,8 +11,12 @@ $(document).ready(function() {
     linkToId(id);
   });
 
+  /**
+   * Cuando se va a una página
+   */
   function linkToId(id) {
-    var el = $('#menu')
+    // actualizar estilos de links del menú
+    $('#menu')
       .find('a').removeClass('active').end()
       .find('a[href*="' + id + '"]').addClass('active');
   }
