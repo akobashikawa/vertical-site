@@ -21,4 +21,18 @@ $(document).ready(function() {
       .find('a[href*="' + id + '"]').addClass('active');
   }
 
+  /**
+   * Comportamiento de los enlaces del menú
+   */  
+  $('#menu a').click(function(e) {
+    e.preventDefault();
+    var id = $(this).attr('href').replace(/#/, '');
+    var top = Math.floor( $('#' + id).offset().top );
+    $.address.value(id);
+    $('html, body').stop().animate({
+      scrollTop: top
+    });
+    return false;
+  });
+
 });
