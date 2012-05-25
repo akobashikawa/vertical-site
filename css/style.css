@@ -1,7 +1,33 @@
+#header {
+  position: fixed;
+  background-color: #fa0;
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  padding: 0 1em;
+}
+#header h3 {
+  font-weight: bold;
+  font-size: 120%;  
+}
+#menu {
+  position: fixed;
+  background-color: #fea;
+  top: 50px; /* #header.height */
+  right: 0;
+  width: 60px;
+  padding: 1em;
+}
+.pages {
+  margin-right: 100px; /* cause menu overlap */
+}
 .page {
   padding: 1em;
 }
 .page h1 {
   font-weight: bold;
   font-size: 140%;
+}
+.page .content {
+  padding-top: 50px; /* #header.height */
 }

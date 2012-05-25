@@ -23,3 +23,8 @@ simple_html
 * Páginas con anclas
 * Cabecera
 * Menú con enlaces a páginas
+
+nav_fixed
+---------
+* Páginas con anclas
+* Elementos de navegación fijos
