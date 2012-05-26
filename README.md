@@ -29,3 +29,4 @@ nav_fixed
 * Páginas con anclas
 * Elementos de navegación fijos
 * Indicador de posición en el menú (sensible a url, links y scroll)
+* Ajuste automático de altura mínima de página
