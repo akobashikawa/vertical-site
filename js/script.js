@@ -24,7 +24,7 @@ $(document).ready(function() {
   /**
    * Comportamiento de los enlaces del menú
    */  
-  $('#menu a').click(function(e) {
+  $('a.scrollto').click(function(e) {
     e.preventDefault();
     var id = $(this).attr('href').replace(/#/, '');
     var top = Math.floor( $('#' + id).offset().top );
