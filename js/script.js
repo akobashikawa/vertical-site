@@ -1,3 +1,5 @@
+var global = {};
+
 $(document).ready(function() {
 
   /**
@@ -38,8 +40,8 @@ $(document).ready(function() {
   /**
    * Crea un array con info de las páginas
    */
-  var pages = [];
   function initPages() {
+    var pages = [];
     var windowHeight = $(window).height();
     $('.page').each(function(i, el) {
       var top = Math.floor($(el).offset().top);
@@ -47,6 +49,8 @@ $(document).ready(function() {
       pages[i] = {'id': id, 'top': top};
       $(this).css({'min-height': windowHeight});
     });
+    global.pages = pages;
+    global.maxtop = pages[pages.length-1].top;
     //console.log(pages);
   }
   initPages();
@@ -56,6 +60,7 @@ $(document).ready(function() {
    * sea menor al especificado.
    */
   function getPageForTop(top) {
+    var pages = global.pages;
     var result = pages[0];
     for (i in pages) {
       if (pages[i].top > top) {
@@ -70,11 +75,26 @@ $(document).ready(function() {
   /**
    * Comportamiento de la ventana
    */
-  var headerHeight = $('#header').height();console.log($(window).height());
+  global.headerHeight = $('#header').height();
+  global.top = $(window).scrollTop();
+  global.deltaFactor = 4;
+
   $(window).scroll(function(){ // responde al scroll
-    var top = $(window).scrollTop() + headerHeight;// compensa #header offset
-    var id = getPageForTop(top).id; //console.log('top:' + top + ' scroll: ' + id);
+    var top = $(window).scrollTop();
+    var id = getPageForTop(top).id;
     $.address.value(id);
+    global.top = $(window).scrollTop();
+  }).mousewheel(function(e, delta) {// responde al mousewheel
+    e.preventDefault();// previene desplazamiento normal
+    var top = global.top;
+    top -= delta * global.deltaFactor;
+    if (top < 0) {
+      top = 0;
+    } else if (top > global.maxtop) {
+      top = global.maxtop;
+    }
+    $(window).scrollTop(top);
+    global.top = top;
   }).resize(function() { // responde al resize
     initPages();
   });
