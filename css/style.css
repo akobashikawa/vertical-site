@@ -12,7 +12,7 @@
 }
 #menu {
   position: fixed;
-  background-color: #fea;
+  background-color: rgba(255, 255, 255, 0.3);
   top: 50px; /* #header.height */
   right: 0;
   width: 100px;
@@ -31,7 +31,6 @@
 
 }
 .pages {
-  margin-right: 100px; /* cause menu overlap */
 }
 .page {
   padding: 1em;
@@ -42,4 +41,23 @@
 }
 .page .content {
   padding-top: 50px; /* #header.height */
+  padding-right: 200px;
+}
+#page-0 {
+  background: url(../img/bg-3.jpg) center top fixed;
+}
+#page-1 {
+  background: url(../img/bg-1.jpg) center top fixed;
+}
+#page-2 {
+  background: url(../img/bg-2.jpg) center top fixed;
+}
+#page-3 {
+  background: url(../img/bg-3.jpg) center top fixed;
+}
+#page-4 {
+  background: url(../img/bg-2.jpg) center top fixed;
+}
+#page-5 {
+  background: url(../img/bg-1.jpg) center top fixed;
 }

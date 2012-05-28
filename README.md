@@ -38,3 +38,8 @@ scrollto
 scrollslow
 ----------
 * Scroll lento
+
+scrollbgfixed
+-------------
+* Scroll lento
+* Fondo fijo
