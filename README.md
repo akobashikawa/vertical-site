@@ -35,6 +35,6 @@ scrollto
 * Scroll animado suave
 * Ajuste automático de altura mínima de página
 
-scrollfx
---------
+scrollslow
+----------
 * Scroll lento
